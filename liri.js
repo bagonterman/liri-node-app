@@ -27,9 +27,7 @@ switch (userCommands) {
         break;
 }
 function tweets(client) {
-    // client.get('search/tweets', { q: 'brett' }, function (error, tweets, response) {
-    //     console.log(tweets.in_reply_to_status_id);
-    // });
+
     client.get('statuses/user_timeline', function (error, tweets, response) {
         if (!error) {
             for (let i = 0; i < tweets.length; i++) {
@@ -41,13 +39,7 @@ function tweets(client) {
         }
     });
 
-    // _ = require('lodash')
-    // const isTweet = _.conforms({
-    //   contributors: _.isObject,
-    //   id_str: _.isString,
-    //   text: _.isString,
-    // })
-    //console.log(client)
+
 
 }
 function spot(spotify, input) {
@@ -67,7 +59,7 @@ function spot(spotify, input) {
 
             }
 
-            //console.log(tracks);
+
         })
         .catch(function (err) {
             spot(spotify, "The Sign")
