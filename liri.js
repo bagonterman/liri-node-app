@@ -51,7 +51,7 @@ function tweets(client) {
 
 }
 function spot(spotify, input) {
-    if (input == null) { input = 'the sign ace of base'; }
+    if (input === null) { input = 'the sign ace of base'; }
 
     spotify
         .search({ type: 'track', query: input })
